@@ -1,4 +1,10 @@
-﻿  lib_str_func.c
-c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\share\lib_str_func.c(42): warning C4013: 'atoi' undefined; assuming extern returning int
-c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\share\lib_str_func.c(43): warning C4013: 'atoll' undefined; assuming extern returning int
+﻿  argparser.c
+  lib_errorHandler.c
+c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\share\lib_errorhandler.c(3): warning C4028: formal parameter 3 different from declaration
+c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\share\lib_errorhandler.c(3): warning C4029: declared formal parameter list different from definition
+  main.c
+c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\son\main.c(17): warning C4013: 'exit' undefined; assuming extern returning int
+  Generating Code...
+c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\son\main.c(19): warning C4715: 'calcEquation': not all control paths return a value
+  LINK : C:\Users\Adital\Documents\Homework\IOS\OS_intro_project_1\Ex1\Debug\Son.exe not found or not built by the last incremental link; performing full link
   Son.vcxproj -> C:\Users\Adital\Documents\Homework\IOS\OS_intro_project_1\Ex1\Debug\Son.exe

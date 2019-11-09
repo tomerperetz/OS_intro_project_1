@@ -115,11 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Share\argparser.c" />
+    <ClCompile Include="..\Share\lib_errorHandler.c" />
     <ClCompile Include="..\Share\lib_str_func.c" />
-    <ClCompile Include="..\Share\test_file.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Share\argparser.h" />
+    <ClInclude Include="..\Share\hardCodedData.h" />
+    <ClInclude Include="..\Share\lib_errorHandler.h" />
     <ClInclude Include="lib_str_func.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
