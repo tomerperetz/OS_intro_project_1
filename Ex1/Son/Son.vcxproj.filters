@@ -24,8 +24,13 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Share\test_file.c">
+    <ClCompile Include="..\Share\lib_str_func.c">
       <Filter>Shared Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Share\lib_str_func.h">
+      <Filter>Shared Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
