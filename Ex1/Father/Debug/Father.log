@@ -1,0 +1,7 @@
+﻿  argparser.c
+  main.c
+c:\users\segev\source\repos\os_intro_project_1\ex1\father\main.c(8): warning C4047: 'function': 'char *' differs in levels of indirection from 'long'
+c:\users\segev\source\repos\os_intro_project_1\ex1\father\main.c(8): warning C4024: 'raiseError': different types for formal and actual parameter 3
+c:\users\segev\source\repos\os_intro_project_1\ex1\father\main.c(8): warning C4020: 'raiseError': too many actual parameters
+  Generating Code...
+  Father.vcxproj -> C:\Users\segev\source\repos\OS_intro_project_1\Ex1\Debug\Father.exe
