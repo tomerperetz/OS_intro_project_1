@@ -71,3 +71,10 @@ int getLastIntFromString(char *dest_str, int first_index)
 	return int_x;
 }
 
+int getSubEquation(char *equation)
+{
+	int start = 0;
+	for (int i = 0; equation[i] != '\0'; i++)
+		if (equation[i] == '(')
+			start = i;
+}
