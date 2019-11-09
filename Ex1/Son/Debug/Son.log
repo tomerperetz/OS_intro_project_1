@@ -1,3 +1,4 @@
 ﻿  lib_str_func.c
-c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\share\lib_str_func.c(41): warning C4013: 'atoi' undefined; assuming extern returning int
+c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\share\lib_str_func.c(42): warning C4013: 'atoi' undefined; assuming extern returning int
+c:\users\adital\documents\homework\ios\os_intro_project_1\ex1\share\lib_str_func.c(43): warning C4013: 'atoll' undefined; assuming extern returning int
   Son.vcxproj -> C:\Users\Adital\Documents\Homework\IOS\OS_intro_project_1\Ex1\Debug\Son.exe

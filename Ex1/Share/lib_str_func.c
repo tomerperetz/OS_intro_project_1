@@ -31,6 +31,7 @@ int getFirstIntFromString(char *dest_str, int last_index)
 	// add defines, delete prints
 	int int_x = - 1;
 	char char_x[33];
+	long long int long_x = -1;
 
 	for (int i = 0; i < last_index; i++)
 	{
@@ -39,8 +40,12 @@ int getFirstIntFromString(char *dest_str, int last_index)
 
 	char_x[last_index] = '\0';
 	int_x = atoi(char_x);
+	long_x = atoll(char_x);
+
 	printf("first number str: %s\n", char_x);
 	printf("first number int: %d\n", int_x);
+	printf("first number long: %lld\n", long_x);
+
 	return int_x;
 }
 
@@ -48,6 +53,7 @@ int getLastIntFromString(char *dest_str, int first_index)
 {
 	// add defines, delete prints
 	int int_x = -1, last_i = 0, iter = 0;
+	long long int long_x = -1;
 	char char_x[33];
 
 	for (int i = first_index; dest_str[i]!='\0'; i++)
@@ -58,8 +64,10 @@ int getLastIntFromString(char *dest_str, int first_index)
 
 	char_x[iter] = '\0';
 	int_x = atoi(char_x);
+	long_x = atoll(char_x);
 	printf("last number str: %s\n", char_x);
 	printf("last number int: %d\n", int_x);
+	printf("last number long: %lld\n", long_x);
 	return int_x;
 }
 

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "../Share/lib_str_func.h"
 
-_CRT_SECURE_NO_WARNINGS
 
 
 #define YES 0 //need to delete
@@ -67,8 +66,6 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 		
-	//X = get_x(argv[1]);
-	//printf("first int: %d\n", X);
 
 	return 0;
 }
