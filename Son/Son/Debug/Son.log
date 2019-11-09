@@ -1,4 +1,2 @@
 ﻿  main.c
-c:\users\adital\documents\homework\ios\os_intro_project_1\son\son\main.c(15): warning C4101: 'result': unreferenced local variable
-c:\users\adital\documents\homework\ios\os_intro_project_1\son\son\main.c(15): warning C4101: 'Y': unreferenced local variable
-c:\users\adital\documents\homework\ios\os_intro_project_1\son\son\main.c(9): error C4700: uninitialized local variable 'x' used
+  Son.vcxproj -> C:\Users\Adital\Documents\Homework\IOS\OS_intro_project_1\Son\Debug\Son.exe

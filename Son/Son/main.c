@@ -2,7 +2,7 @@
 
 int get_x(char *exp)
 {
-	int x;
+	int x=0;
 	printf("arg: %s", exp);
 	//x = *(exp + 1) - '0';
 
@@ -12,7 +12,6 @@ int get_x(char *exp)
 
 int main(int argc, char *argv[])
 {
-	int result,X,Y;
 	
 	printf("Program name %s\n", argv[0]);
 
@@ -26,7 +25,7 @@ int main(int argc, char *argv[])
 		printf("One argument expected.\n");
 	}
 
-	X = get_x(argv[1]);
+	//X = get_x(argv[1]);
 	//printf("first int: %d\n", X);
 
 	return 0;
