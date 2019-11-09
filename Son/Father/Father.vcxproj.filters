@@ -13,5 +13,19 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Shared Source Files">
+      <UniqueIdentifier>{e580ae69-52a8-4945-bb55-74520c49927b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared Header Files">
+      <UniqueIdentifier>{7174caaa-616a-40e4-979d-1ee736c49301}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Share\test_file.c">
+      <Filter>Shared Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

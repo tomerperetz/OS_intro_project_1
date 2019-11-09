@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		printf("Too many arguments supplied.\n");
 	}
 	else {
-		printf("One argument expected.\n");
+		printf("One argument  .\n");
 	}
 
 	//X = get_x(argv[1]);
