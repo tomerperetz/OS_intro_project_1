@@ -9,6 +9,7 @@
 #include <time.h>
 #include <math.h>
 #include <ctype.h>
+#include <windows.h>
 
 //Const That Relevant For All Projects
 # define ERROR -1

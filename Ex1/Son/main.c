@@ -21,8 +21,6 @@ int calcEquation(int x, int y, char eq_operator)
 
 int main(int argc, char *argv[])
 {	
-	
-
 	char user_equation[MAX_SON_ARG_INPUT_LEN];
 	int x = ERROR, y= ERROR, operator_index = ERROR, result = ERROR;
 
@@ -52,8 +50,8 @@ int main(int argc, char *argv[])
 
 	//need to delete
 	printf("result: %d", result);
-
-	return result;	
+	
+	ExitProcess(result);	
 }
  
 
