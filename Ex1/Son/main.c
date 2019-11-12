@@ -47,9 +47,6 @@ int main(int argc, char *argv[])
 	x = getFirstIntFromString(user_equation, operator_index);
 	y = getLastIntFromString(user_equation, operator_index + 1);
 	result = calcEquation(x, y, user_equation[operator_index]);
-
-	//need to delete
-	printf("result: %d", result);
 	
 	ExitProcess(result);	
 }
