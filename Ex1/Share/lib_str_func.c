@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
-
+#include "../Share/lib_errorHandler.h"
+#include "../Share/hardCodedData.h"
 
 //================================================================
-//This module contains all functions related to string handeling
+//This lib contains all functions related to string handeling
 //================================================================
 
 
@@ -17,22 +18,19 @@ int getCharindex(char desired_char, char *dest_str)
 	{
 		if (dest_str[i] == desired_char)
 		{
-			printf("sub char: %c found on index: %d\n", dest_str[i],i);
 			return i;
 		}
 	}
-	printf("char wasn't found\n");
-	return -1;
+	
+	return ERROR;
 
 }
 
 int getFirstIntFromString(char *dest_str, int last_index)
 {
-	// add defines, delete prints
 	int int_x = - 1;
-	char char_x[33];
-	long long int long_x = -1;
-
+	char char_x[MAX_SON_ARG_INPUT_LEN];
+	
 	for (int i = 0; i < last_index; i++)
 	{
 		char_x[i] = dest_str[i];
@@ -40,21 +38,14 @@ int getFirstIntFromString(char *dest_str, int last_index)
 
 	char_x[last_index] = '\0';
 	int_x = atoi(char_x);
-	long_x = atoll(char_x);
-
-	printf("first number str: %s\n", char_x);
-	printf("first number int: %d\n", int_x);
-	printf("first number long: %lld\n", long_x);
-
+	
 	return int_x;
 }
 
 int getLastIntFromString(char *dest_str, int first_index)
 {
-	// add defines, delete prints
 	int int_x = -1, last_i = 0, iter = 0;
-	long long int long_x = -1;
-	char char_x[33];
+	char char_x[MAX_SON_ARG_INPUT_LEN];
 
 	for (int i = first_index; dest_str[i]!='\0'; i++)
 	{
@@ -64,17 +55,5 @@ int getLastIntFromString(char *dest_str, int first_index)
 
 	char_x[iter] = '\0';
 	int_x = atoi(char_x);
-	long_x = atoll(char_x);
-	printf("last number str: %s\n", char_x);
-	printf("last number int: %d\n", int_x);
-	printf("last number long: %lld\n", long_x);
 	return int_x;
-}
-
-int getSubEquation(char *equation)
-{
-	int start = 0;
-	for (int i = 0; equation[i] != '\0'; i++)
-		if (equation[i] == '(')
-			start = i;
 }
