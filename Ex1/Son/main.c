@@ -42,6 +42,8 @@ int main(int argc, char *argv[])
 			raiseError(1, __FILE__, __func__, __LINE__, ARGS_ERROR);
 	}
 
+	else
+		raiseError(3, __FILE__, __func__, __LINE__, STRCPY_ERROR);
 		
 	// calculate
 	x = getFirstIntFromString(user_equation, operator_index);

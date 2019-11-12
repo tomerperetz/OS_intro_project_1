@@ -25,3 +25,4 @@
 // errors
 # define ARGS_ERROR  "arguments error. please restart the function.\nYou may type -h for help.\n"
 # define OPERATOR_ERROR  "Can't use supplied opertor: %c\nExiting Program\n"
+# define STRCPY_ERROR "String copy error. please reset the program.\n"
