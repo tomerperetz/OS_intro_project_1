@@ -11,13 +11,16 @@
 #include <ctype.h>
 
 //Const That Relevant For All Projects
-static const int ERROR = -1;
-static const int YES = 0;
-static const int TRUE = 1;
-static const int FALSE = 1;
+# define ERROR -1
+# define YES 0
+# define TRUE 1
+# define FALSE 1
 
 
 //Const That Relevant For This Project Only
-static const int MAX_SON_ARG_INPUT_LEN = 32;
-static const int MAX_FATHER_ARG_INPUT_LEN = 256;
+# define MAX_SON_ARG_INPUT_LEN 32
+# define MAX_FATHER_ARG_INPUT_LEN 256
 
+// errors
+# define ARGS_ERROR  "arguments error. please restart the function.\nYou may type -h for help.\n"
+# define OPERATOR_ERROR  "Can't use supplied opertor: %c\nExiting Program\n"
