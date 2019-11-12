@@ -1,6 +1,16 @@
 #include "argparser.h"
 
-int ensureArgs(int argc, int expected_argc, char *argv[]) {
+int ensureArgs(int argc, int expected_argc, char *argv[]) 
+{
+	/*
+	Description: recieves user args and verify they are valid.
+	parameters:
+			 - int argc - number of args recieved.
+			 - int expected_argc - number of args expected.
+			 - char argv - args
+	Returns: TRUE if the args are valid, ERROR o.w
+	*/
+
 	if (argc == 2 && (strcmp(argv[1], "-h") == YES || strcmp(argv[1], "--help") == YES) )
 	{
 		callHelper();
@@ -18,11 +28,13 @@ int ensureArgs(int argc, int expected_argc, char *argv[]) {
 
 }
 
-int isArgsValid(int argc, char *argv[]) {
-	/*optional*/
-	return TRUE;
-}
 
 void callHelper() {
+	/*
+	Description: prints help for the program and exits.
+	parameters: none
+	Returns: none
+	*/
+
 	printf(HELPER);
 }

@@ -6,7 +6,15 @@
 
 int calcEquation(int x, int y, char eq_operator)
 {
-	//char operator_error[60] = "Can't use supplied opertor: %c\nExiting Program\n";
+	/*
+	Description: calculate equation - X + Y or X * Y
+	parameters:
+			 - int X
+			 - int Y
+			 - char eq_operator - arithmetical operator 
+	Returns: int
+	*/
+
 
 	if (eq_operator == '+')
 		return (x + y);
@@ -21,6 +29,15 @@ int calcEquation(int x, int y, char eq_operator)
 
 int main(int argc, char *argv[])
 {	
+	/*
+	Description: get a string equation from user: "X + Y" or "X * Y". 
+	convert numbers to integers and calculate the result.
+	parameters:
+			 - char* argv - user args. should include program name and equation.
+			 - int argc = number of parameters given by user.
+	Return: int.
+	*/
+
 	char user_equation[MAX_SON_ARG_INPUT_LEN];
 	int x = ERROR, y= ERROR, operator_index = ERROR, result = ERROR;
 
