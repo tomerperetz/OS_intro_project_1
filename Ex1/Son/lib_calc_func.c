@@ -20,8 +20,6 @@ int calcEquation(int x, int y, char eq_operator)
 	Returns: int
 	*/
 
-
-
 	if (eq_operator == '+')
 		return (x + y);
 	else if (eq_operator == '*')

@@ -1,11 +1,37 @@
+/*
+====================================================================================================================
+
+Description:
+this lib contains all functions related to father main.c.
+extended description is in the functions.
+====================================================================================================================
+*/
+
+
 #include "./lib_father_funcs.h"
 
 void close_program(FILE *fp) {
+	/*
+	Description: close program.
+	Prameters:
+		 - FILE *fp - file pointer.
+		 - int expected_argc - number of args expected.
+		 - char argv - args
+	Returns: nothing if succeded, ERR o.w
+	*/
+
 	if (fclose(fp) != IS_FALSE)
 		raiseError(4, __FILE__, __func__, __LINE__, ERROR_ID_4_CONTENT);
 }
 
 int execute_program(char equation[]) {
+	/*
+	Description: Executes father program - calulate equations inside out and left to right.
+	Prameters:
+		 - char equation[] - user equation given as a string.
+	Returns: IS_TRUE if succeded, ERR o.w
+	*/
+
 	int idx = 0, sub_equation_idx = 0, sub_equation_start_idx = -1, sub_equation_end_idx = -1;
 	long result;
 	char sub_equation[MAX_SON_ARG_INPUT_LEN], command[MAX_SON_ARG_INPUT_LEN + 4], result_str[MAX_SON_ARG_INPUT_LEN];
@@ -22,7 +48,6 @@ int execute_program(char equation[]) {
 		 3. Calls the son process
 		 4. Prints the equation after each itration to the Computation.txt file
 	*/
-	printf("%s\n", equation);
 	while (equation[idx] != END_OF_STR) {
 		// Checks if the current char is equal to (
 		if (equation[idx] == OPEN_PARENTHESIS) {
@@ -52,7 +77,6 @@ int execute_program(char equation[]) {
 			sub_equation_end_idx = idx;
 			/*replace sub equation*/
 			replace_sub_string(equation, sub_equation_start_idx, sub_equation_end_idx, result_str);
-			printf("%s\n", equation);
 			/*initialization*/
 			idx = 0;
 			sub_equation_idx = 0;

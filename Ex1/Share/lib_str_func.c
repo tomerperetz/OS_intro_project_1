@@ -95,6 +95,16 @@ int getLastIntFromString(char *dest_str, int first_index)
 
 
 void add_sub_string_to_string(char dest_str[], char sub_str[], int start_idx) {
+
+	/*
+	Description: add sub-string to given string, starting from a giving index.
+	parameters:
+			 - char dest_str[] - destanation string
+			 - char sub_str[] - desired string to be added
+			 - int start_idx - start index to add the substring in
+	Returns: void
+	*/
+
 	int idx = 0;
 	for (idx = 0; sub_str[idx] != END_OF_STR; idx++, start_idx++)
 		dest_str[start_idx] = sub_str[idx];
@@ -102,7 +112,18 @@ void add_sub_string_to_string(char dest_str[], char sub_str[], int start_idx) {
 
 }
 
-void replace_sub_string(char *string, int sub_str_start_idx, int sub_str_end_idx, char *new_sub_string) {
+
+void replace_sub_string(char *string, int sub_str_start_idx, int sub_str_end_idx, char *new_sub_string) 
+{
+	/*
+	Description: replace sub string in a given string, with a new substring.
+	parameters:
+			- char *string - main string.
+			- int sub_str_start_idx - start index to replace
+			- int sub_str_end_idx - end index to replace
+			- char *new_sub_string - new string to insert
+	Returns: void
+	*/
 	char string_start[MAX_FATHER_ARG_INPUT_LEN], string_end[MAX_FATHER_ARG_INPUT_LEN];
 
 	strcpy_s(string_end, MAX_FATHER_ARG_INPUT_LEN, &string[sub_str_end_idx + 1]);

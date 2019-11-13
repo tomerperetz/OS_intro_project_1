@@ -1,9 +1,3 @@
-#include "../Share/argparser.h"
-#include "../Share/hardCodedData.h"
-#include "../Share/lib_errorHandler.h"
-#include "../Share/lib_str_func.h"
-#include "winAPI.h"
-#include "./lib_father_funcs.h"
 /*
 ====================================================================================================================
 Authors:
@@ -13,9 +7,17 @@ Project: Son
 Input:
 Outputs:
 Description:
-this file convert a string equation with the form: "X+Y" or "X*Y" to integers and returns the calculation result
+this script calculates the result of an equation and steps of solution.
+order of the calculation is determined by parenthesis order - inside out and left to right.
 ====================================================================================================================
 */
+
+#include "../Share/argparser.h"
+#include "../Share/hardCodedData.h"
+#include "../Share/lib_errorHandler.h"
+#include "../Share/lib_str_func.h"
+#include "winAPI.h"
+#include "./lib_father_funcs.h"
 
 int main(int argc, char *argv[]) {
 	char equation[MAX_FATHER_ARG_INPUT_LEN];
@@ -25,9 +27,9 @@ int main(int argc, char *argv[]) {
 	strcpy_s(equation, MAX_FATHER_ARG_INPUT_LEN, argv[1]);
 	
 	if (execute_program(equation) == IS_TRUE) {
-		printf("+++++++++++++++++++++++++++++++++++++++++++++++++\n"\
-			   "The program ended successfully and without error!\n"\
-			   "+++++++++++++++++++++++++++++++++++++++++++++++++\n");
+		printf("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"\
+			   "\t\tProgram ended succesfuly! Results has been printed to './Computation.txt'\n"\
+			   "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
 		return IS_FALSE; // Program has finished with no Error!
 	}
 	else

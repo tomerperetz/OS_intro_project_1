@@ -1,3 +1,11 @@
+/*
+====================================================================================================================
+Description:
+this lib contains all functions related to father main.c.
+extended description is in the functions.
+====================================================================================================================
+*/
+
 #pragma once
 #pragma once
 #ifdef _MSC_VER

@@ -1,14 +1,3 @@
-#pragma once
-#ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS
-#endif
-
-#include "../Share/hardCodedData.h"
-#include "../Share/lib_errorHandler.h"
-
-
-
-
 /**
 * CreateProcessSimple uses the win32 API to create a process that runs the
 * command in 'CommandLine'. it uses the win32 API function CreateProcess()
@@ -26,6 +15,16 @@
 * --------
 * the output of CreateProcess().
 */
+
+
+#pragma once
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
+#include "../Share/hardCodedData.h"
+#include "../Share/lib_errorHandler.h"
+
 
 BOOL CreateProcessSimple(LPTSTR CommandLine, PROCESS_INFORMATION *ProcessInfoPtr);
 int CreateProcessSimpleMain(char *command);
