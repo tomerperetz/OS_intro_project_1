@@ -9,7 +9,7 @@ static const int EXPECTED_ARGC = 2;
 static const char HELPER[1000] = \
 "===========================================================================================\n"\
 "This Program will caluculate the result of nested equation with the following form: '((X+Y)*Z)'\n"\
-"Inputs: equation - nested equation. you may use only '+' or '-' operators. every sub equation must be within Parenthesis\n"\
+"Inputs: equation - nested equation. you may use only '+' or '*' operators. every sub equation must be within Parenthesis\n"\
 "Output: results will be printed to an output file by the order of calulation. \n"\
 "===========================================================================================\n";
 

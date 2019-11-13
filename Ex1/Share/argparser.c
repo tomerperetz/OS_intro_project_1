@@ -27,10 +27,15 @@ int ensureArgs(int argc, int expected_argc, char *argv[])
 	}
 
 }
-int isArgsValid(argc, argv) {
-	/*To Do*/
+int isArgsValid(argc, argv) 
+{
+	/*
+	Description: future function for this lib. will be used in the following projects.
+	*/
+
 	return IS_TRUE;
 }
+
 void callHelper() {
 	/*
 	Description: prints help for the program and exits.
