@@ -1,15 +1,18 @@
-#include <stdio.h>
-#include <string.h>
+/*
+====================================================================================================================
+Description:
+This lib contains all functions related to string handeling
+====================================================================================================================
+*/
+
 #include "../Share/lib_errorHandler.h"
 #include "../Share/hardCodedData.h"
 
-//================================================================
-//This lib contains all functions related to string handeling
-//================================================================
 
 
 int getCharindex(char desired_char, char *dest_str)
 {
+
 	/*
 	Description: get index for first apperance of a given char
 	parameters: 

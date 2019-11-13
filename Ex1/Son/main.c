@@ -1,12 +1,6 @@
-
-#include "../Share/lib_str_func.h"
-#include "../Share/argparser.h"
-#include "../Share/lib_errorHandler.h"
-#include "lib_calc_func.h"
-
 /*
 ====================================================================================================================
-Authors: 
+Authors:
 	- Segev Elmalem, ID: 203149000
 	- Tomer Peretz, ID: 305002206
 Project: Son
@@ -14,6 +8,11 @@ Description:
 this file convert a string equation with the form: "X+Y" or "X*Y" to integers and returns the calculation result
 ====================================================================================================================
 */
+
+#include "../Share/lib_str_func.h"
+#include "../Share/argparser.h"
+#include "../Share/lib_errorHandler.h"
+#include "lib_calc_func.h"
 
 int main(int argc, char *argv[])
 {	

@@ -1,4 +1,13 @@
+
+/*
+====================================================================================================================
+Description:
+this lib is used for error handeling.
+====================================================================================================================
+*/
+
 #include "lib_errorHandler.h"
+
 
 void raiseError(int error_id, const char *function_name ,const char *file_path, int line, const char *description)
 {

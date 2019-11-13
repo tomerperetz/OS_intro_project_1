@@ -1,3 +1,10 @@
+/*
+====================================================================================================================
+Description:
+this lib is a parser for arguments recieved from user.
+====================================================================================================================
+*/
+
 #pragma once
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
@@ -15,7 +22,6 @@ static const char HELPER[1000] = \
 
 
 int ensureArgs(int argc, int expected_argc, char *argv[]);
-int isArgsValid(argc, argv);
 int isArgsValid(int argc, char *argv[]);
 void callHelper();
 

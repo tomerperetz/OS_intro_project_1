@@ -1,3 +1,11 @@
+/*
+====================================================================================================================
+Description:
+Hard coded data: includes and defines
+====================================================================================================================
+*/
+
+
 #pragma once
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
@@ -24,7 +32,3 @@ static const char CLOSE_PARENTHESIS = ')';
 # define MAX_SON_ARG_INPUT_LEN 32
 # define MAX_FATHER_ARG_INPUT_LEN 256
 
-// errors
-# define ARGS_ERROR  "arguments error. please restart the function.\nYou may type -h for help.\n"
-# define OPERATOR_ERROR  "Can't use supplied opertor: %c\nExiting Program\n"
-# define STRCPY_ERROR "String copy error. please reset the program.\n"

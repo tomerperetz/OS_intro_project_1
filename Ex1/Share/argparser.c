@@ -1,3 +1,10 @@
+/*
+====================================================================================================================
+Description:
+this lib is a parser for arguments recieved from user.
+====================================================================================================================
+*/
+
 #include "argparser.h"
 
 int ensureArgs(int argc, int expected_argc, char *argv[]) 
@@ -27,10 +34,10 @@ int ensureArgs(int argc, int expected_argc, char *argv[])
 	}
 
 }
-int isArgsValid(argc, argv) 
+int isArgsValid(int argc, char *argv[])
 {
 	/*
-	Description: future function for this lib. will be used in the following projects.
+	Description: future function for this lib. will be used in the following projects for more complexed inputs.
 	*/
 
 	return IS_TRUE;
