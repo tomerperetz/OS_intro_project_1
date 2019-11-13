@@ -15,6 +15,7 @@ static const char HELPER[1000] = \
 
 
 int ensureArgs(int argc, int expected_argc, char *argv[]);
+int isArgsValid(argc, argv);
 int isArgsValid(int argc, char *argv[]);
 void callHelper();
 

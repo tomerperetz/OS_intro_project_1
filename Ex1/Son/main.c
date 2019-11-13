@@ -1,6 +1,7 @@
 
 #include "../Share/lib_str_func.h"
 #include "../Share/argparser.h"
+#include "../Share/lib_errorHandler.h"
 
 
 
@@ -23,7 +24,7 @@ int calcEquation(int x, int y, char eq_operator)
 	else
 	{
 		raiseError(1, __FILE__, __func__, __LINE__, ARGS_ERROR);
-		return ERROR;
+		return ERR;
 	}
 }
 
@@ -39,23 +40,23 @@ int main(int argc, char *argv[])
 	*/
 
 	char user_equation[MAX_SON_ARG_INPUT_LEN];
-	int x = ERROR, y= ERROR, operator_index = ERROR, result = ERROR;
+	int x = ERR, y= ERR, operator_index = ERR, result = ERR;
 
 	// args parser
-	if (ensureArgs(argc, 1, argv) == FALSE)
+	if (ensureArgs(argc, 1, argv) == IS_FALSE)
 			raiseError(2, __FILE__, __func__, __LINE__, ARGS_ERROR);
 
-	if (YES == strcpy_s(user_equation, MAX_SON_ARG_INPUT_LEN, argv[1]))
+	if (EQUAL == strcpy_s(user_equation, MAX_SON_ARG_INPUT_LEN, argv[1]))
 	{
 		// Search for '+' arithmetic operator index
 		operator_index = getCharindex('+', user_equation);
 
 		// if '+' wasn't found look for '*'
-		if (operator_index == ERROR)
+		if (operator_index == ERR)
 			operator_index = getCharindex('*', user_equation);
 
 		// verify operator was found
-		if (operator_index == ERROR)
+		if (operator_index == ERR)
 			raiseError(1, __FILE__, __func__, __LINE__, ARGS_ERROR);
 	}
 
@@ -66,7 +67,6 @@ int main(int argc, char *argv[])
 	x = getFirstIntFromString(user_equation, operator_index);
 	y = getLastIntFromString(user_equation, operator_index + 1);
 	result = calcEquation(x, y, user_equation[operator_index]);
-	
 	ExitProcess(result);	
 }
  

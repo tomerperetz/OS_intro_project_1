@@ -15,7 +15,7 @@ int getCharindex(char desired_char, char *dest_str)
 	parameters: 
 			 - char desired_char - char that is being looked for
 			 - char *dest_str - string to look for the char in
-	Returns: int index if the char was found. ERROR o.w
+	Returns: int index if the char was found. ERR o.w
 	*/
 	
 	int len = -1;
@@ -29,7 +29,7 @@ int getCharindex(char desired_char, char *dest_str)
 		}
 	}
 	
-	return ERROR;
+	return ERR;
 
 }
 

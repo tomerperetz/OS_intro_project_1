@@ -12,11 +12,13 @@
 #include <windows.h>
 
 //Const That Relevant For All Projects
-# define ERROR -1
-# define YES 0
-# define TRUE 1
-# define FALSE 1
-
+static const int ERR = -1;
+static const int EQUAL = 0;
+static const int IS_TRUE = 1;
+static const int IS_FALSE = 0;
+static const char END_OF_STR = '\0';
+static const char OPEN_PARENTHESIS = '(';
+static const char CLOSE_PARENTHESIS = ')';
 
 //Const That Relevant For This Project Only
 # define MAX_SON_ARG_INPUT_LEN 32

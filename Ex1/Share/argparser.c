@@ -8,27 +8,29 @@ int ensureArgs(int argc, int expected_argc, char *argv[])
 			 - int argc - number of args recieved.
 			 - int expected_argc - number of args expected.
 			 - char argv - args
-	Returns: TRUE if the args are valid, ERROR o.w
+	Returns: IS_TRUE if the args are valid, ERR o.w
 	*/
 
-	if (argc == 2 && (strcmp(argv[1], "-h") == YES || strcmp(argv[1], "--help") == YES) )
+	if (argc == 2 && (strcmp(argv[1], "-h") == EQUAL || strcmp(argv[1], "--help") == EQUAL) )
 	{
 		callHelper();
-		return TRUE;
+		return IS_TRUE;
 	}
 	else if (argc == expected_argc){
-		if (isArgsValid(argc, argv) == TRUE)
-			return TRUE;
+		if (isArgsValid(argc, argv) == IS_TRUE)
+			return IS_TRUE;
 		else
-			return ERROR;
+			return ERR;
 	}
 	else {
-		return ERROR;
+		return ERR;
 	}
 
 }
-
-
+int isArgsValid(argc, argv) {
+	/*To Do*/
+	return IS_TRUE;
+}
 void callHelper() {
 	/*
 	Description: prints help for the program and exits.

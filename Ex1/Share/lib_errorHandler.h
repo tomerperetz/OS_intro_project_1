@@ -7,8 +7,8 @@
 //
 //static const int ERROR_ID_1 = 1;
 //static const int ERROR_ID_GLOBAL= -1;
-//static const char ERROR_ID_1_CONTENT[160] = \
-//"The given arguments are not in the correct format / number of arguments is incorrect.\n"\
-//"For more help please run the following command: ~<Project-Name> --help\n";
+static const char ERROR_ID_1_CONTENT[160] = \
+"The given arguments are not in the correct format / number of arguments is incorrect.\n"\
+"For more help please run the following command: ~<Project-Name> --help\n";
+void raiseError(int error_id, const char *function_name, const char *file_path, int line, const char *description);
 
-void raiseError(int error_id, char *function_name, char *file_path, int line, char *description);

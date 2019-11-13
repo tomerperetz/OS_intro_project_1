@@ -119,12 +119,14 @@
     <ClCompile Include="..\Share\lib_errorHandler.c" />
     <ClCompile Include="..\Share\lib_str_func.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="winAPI.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Share\argparser.h" />
     <ClInclude Include="..\Share\hardCodedData.h" />
     <ClInclude Include="..\Share\lib_errorHandler.h" />
     <ClInclude Include="lib_str_func.h" />
+    <ClInclude Include="winAPI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
