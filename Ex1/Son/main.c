@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	*/
 
 	char user_equation[MAX_SON_ARG_INPUT_LEN];
-	int x = ERR, y= ERR, operator_index = ERR, result = ERR;
+	int x = ERR, y= ERR, operator_index = ERR, result = ERR, op_number = ERR;
 
 	// args parser
 	if (ensureArgs(argc, 1, argv) == IS_FALSE)
@@ -36,6 +36,11 @@ int main(int argc, char *argv[])
 
 	if (EQUAL == strcpy_s(user_equation, MAX_SON_ARG_INPUT_LEN, argv[1]))
 	{
+		//verify equation contains only single operator
+		op_number = countOpretors(user_equation);
+		if (op_number!=1)
+			raiseError(1, __FILE__, __func__, __LINE__, ERROR_ID_1_CONTENT);
+		
 		// Search for '+' arithmetic operator index
 		operator_index = getCharindex('+', user_equation);
 

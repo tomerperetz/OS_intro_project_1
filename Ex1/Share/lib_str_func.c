@@ -8,7 +8,16 @@ This lib contains all functions related to string handeling
 #include "../Share/lib_errorHandler.h"
 #include "../Share/hardCodedData.h"
 
-
+int countOpretors(char *dest_str)
+{
+	int counter = 0;
+	for (int i = 0; dest_str[i] != '\0'; i++)
+	{
+		if ((dest_str[i] == '+') || (dest_str[i] == '*'))
+			counter++;
+	}
+	return counter;
+}
 
 int getCharindex(char desired_char, char *dest_str)
 {
@@ -21,7 +30,7 @@ int getCharindex(char desired_char, char *dest_str)
 	Returns: int index if the char was found. ERR o.w
 	*/
 	
-	int len = -1;
+	int len = ERR;
 	len = strlen(dest_str);
 
 	for (int i = 0; i<=len; i++)
