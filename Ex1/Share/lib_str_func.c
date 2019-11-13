@@ -100,6 +100,4 @@ void replace_sub_string(char *string, int sub_str_start_idx, int sub_str_end_idx
 	string[sub_str_start_idx] = END_OF_STR;
 	strcpy_s(string_start, MAX_FATHER_ARG_INPUT_LEN, string);
 	sprintf_s(string, MAX_FATHER_ARG_INPUT_LEN, "%s%s%s", string_start, new_sub_string, string_end);
-	//add_sub_string_to_string(string, new_sub_string, sub_str_start_idx);
-	//add_sub_string_to_string(string, string_end, sub_str_start_idx + strlen(new_sub_string));
 }

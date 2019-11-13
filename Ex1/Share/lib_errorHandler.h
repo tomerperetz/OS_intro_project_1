@@ -23,12 +23,15 @@ this lib is used for error handeling.
 //static const int ERROR_ID_1 = 1;
 //static const int ERROR_ID_GLOBAL= -1;
 
-# define ARGS_ERROR  "arguments error. please restart the function.\nYou may type -h for help.\n"
-# define OPERATOR_ERROR  "Can't use supplied opertor: %c\nExiting Program\n"
+#
 # define STRCPY_ERROR "String copy error. please reset the program.\n"
 static const char ERROR_ID_1_CONTENT[160] = \
 "The given arguments are not in the correct format / number of arguments is incorrect.\n"\
 "For more help please run the following command: ~<Project-Name> --help\n";
+static const char ERROR_ID_2_CONTENT[73] = \
+"arguments error. please restart the function.\nYou may type -h for help.\n";
+static const char ERROR_ID_3_CONTENT[48] = \
+"Can't use supplied opertor: %c\nExiting Program\n";
 static const char ERROR_ID_4_CONTENT[55] = \
 "IO ERROR has occured.\nProgram can't open the file\n";
 static const char ERROR_ID_5_CONTENT[55] = \

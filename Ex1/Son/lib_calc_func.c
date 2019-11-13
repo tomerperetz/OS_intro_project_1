@@ -28,7 +28,7 @@ int calcEquation(int x, int y, char eq_operator)
 		return (x*y);
 	else
 	{
-		raiseError(1, __FILE__, __func__, __LINE__, ARGS_ERROR);
+		raiseError(2, __FILE__, __func__, __LINE__, ERROR_ID_2_CONTENT);
 		return ERR;
 	}
 }

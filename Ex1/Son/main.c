@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 	// args parser
 	if (ensureArgs(argc, 1, argv) == IS_FALSE)
-			raiseError(2, __FILE__, __func__, __LINE__, ARGS_ERROR);
+			raiseError(2, __FILE__, __func__, __LINE__, ERROR_ID_2_CONTENT);
 
 	if (EQUAL == strcpy_s(user_equation, MAX_SON_ARG_INPUT_LEN, argv[1]))
 	{
@@ -45,11 +45,11 @@ int main(int argc, char *argv[])
 
 		// verify operator was found
 		if (operator_index == ERR)
-			raiseError(1, __FILE__, __func__, __LINE__, ARGS_ERROR);
+			raiseError(2, __FILE__, __func__, __LINE__, ERROR_ID_2_CONTENT);
 	}
 
 	else
-		raiseError(3, __FILE__, __func__, __LINE__, STRCPY_ERROR);
+		raiseError(3, __FILE__, __func__, __LINE__, ERROR_ID_3_CONTENT);
 		
 	// calculate
 	x = getFirstIntFromString(user_equation, operator_index);
