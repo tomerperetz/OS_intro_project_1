@@ -13,10 +13,6 @@ Hard coded data: includes and defines
 
 #include <stdio.h>	
 #include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include <math.h>
-#include <ctype.h>
 #include <windows.h>
 
 //Const That Relevant For All Projects
@@ -27,6 +23,9 @@ static const int IS_FALSE = 0;
 static const char END_OF_STR = '\0';
 static const char OPEN_PARENTHESIS = '(';
 static const char CLOSE_PARENTHESIS = ')';
+
+#define TIMEOUT_IN_MILLISECONDS 10000
+#define BRUTAL_TERMINATION_CODE -10
 
 //Const That Relevant For This Project Only
 # define MAX_SON_ARG_INPUT_LEN 32

@@ -15,35 +15,23 @@ int CreateProcessSimpleMain(char *command)
 
 	if (retVal == 0)
 	{
-		printf("Process Creation Failed!\n");
+		raiseError(7, __FILE__, __func__, __LINE__, "Process Creation Failed!\n");
 		return ERR;
 	}
 
 
 	waitcode = WaitForSingleObject(
 		procinfo.hProcess,
-		INFINITE); /* Waiting 5 secs for the process to end */
+		TIMEOUT_IN_MILLISECONDS); /* Waiting 10 secs for the process to end */
 
-	//printf("WaitForSingleObject output: ");
-	//switch (waitcode)
-	//{
-	//case WAIT_TIMEOUT:
-	//	printf("WAIT_TIMEOUT\n"); break;
-	//case WAIT_OBJECT_0:
-	//	printf("WAIT_OBJECT_0\n"); break;
-	//default:
-	//	printf("0x%x\n", waitcode);
-	//}
 
-	//if (waitcode == WAIT_TIMEOUT) /* Process is still alive */
-	//{
-	//	printf("Process was not terminated before timeout!\n"
-	//		"Terminating brutally!\n");
-	//	TerminateProcess(
-	//		procinfo.hProcess,
-	//		BRUTAL_TERMINATION_CODE); /* Terminating process with an exit code of 55h */
-	//	Sleep(10); /* Waiting a few milliseconds for the process to terminate */
-	//}
+	if (waitcode == WAIT_TIMEOUT) /* Process is still alive */
+	{
+		TerminateProcess(
+			procinfo.hProcess,
+			BRUTAL_TERMINATION_CODE); /* Terminating process with an exit code of -10 */
+		Sleep(10); /* Waiting a few milliseconds for the process to terminate */
+	}
 
 	GetExitCodeProcess(procinfo.hProcess, &exitcode);
 

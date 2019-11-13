@@ -51,4 +51,5 @@ void callHelper() {
 	*/
 
 	printf(HELPER);
+	exit(IS_FALSE);
 }

@@ -34,7 +34,10 @@
       <Filter>Shared Source Files</Filter>
     </ClCompile>
     <ClCompile Include="winAPI.c">
-      <Filter>Resource Files</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib_father_funcs.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +54,9 @@
       <Filter>Shared Header Files</Filter>
     </ClInclude>
     <ClInclude Include="winAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib_father_funcs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,6 +4,8 @@ Authors:
 	- Segev Elmalem, ID: 203149000
 	- Tomer Peretz, ID: 305002206
 Project: Son
+Input:
+Outputs:
 Description:
 this file convert a string equation with the form: "X+Y" or "X*Y" to integers and returns the calculation result
 ====================================================================================================================

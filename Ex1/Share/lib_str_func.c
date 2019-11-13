@@ -83,3 +83,23 @@ int getLastIntFromString(char *dest_str, int first_index)
 	int_x = atoi(char_x);
 	return int_x;
 }
+
+
+void add_sub_string_to_string(char dest_str[], char sub_str[], int start_idx) {
+	int idx = 0;
+	for (idx = 0; sub_str[idx] != END_OF_STR; idx++, start_idx++)
+		dest_str[start_idx] = sub_str[idx];
+	dest_str[start_idx] = END_OF_STR;
+
+}
+
+void replace_sub_string(char *string, int sub_str_start_idx, int sub_str_end_idx, char *new_sub_string) {
+	char string_start[MAX_FATHER_ARG_INPUT_LEN], string_end[MAX_FATHER_ARG_INPUT_LEN];
+
+	strcpy_s(string_end, MAX_FATHER_ARG_INPUT_LEN, &string[sub_str_end_idx + 1]);
+	string[sub_str_start_idx] = END_OF_STR;
+	strcpy_s(string_start, MAX_FATHER_ARG_INPUT_LEN, string);
+	sprintf_s(string, MAX_FATHER_ARG_INPUT_LEN, "%s%s%s", string_start, new_sub_string, string_end);
+	//add_sub_string_to_string(string, new_sub_string, sub_str_start_idx);
+	//add_sub_string_to_string(string, string_end, sub_str_start_idx + strlen(new_sub_string));
+}
