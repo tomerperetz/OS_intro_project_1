@@ -122,6 +122,7 @@
     <ClCompile Include="..\Share\argparser.c" />
     <ClCompile Include="..\Share\lib_errorHandler.c" />
     <ClCompile Include="..\Share\lib_str_func.c" />
+    <ClCompile Include="lib_calc_func.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +130,7 @@
     <ClInclude Include="..\Share\hardCodedData.h" />
     <ClInclude Include="..\Share\lib_errorHandler.h" />
     <ClInclude Include="..\Share\lib_str_func.h" />
+    <ClInclude Include="lib_calc_func.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
