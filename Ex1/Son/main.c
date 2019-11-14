@@ -30,8 +30,9 @@ int main(int argc, char *argv[])
 	char user_equation[MAX_SON_ARG_INPUT_LEN];
 	int x = ERR, y= ERR, operator_index = ERR, result = ERR, op_number = ERR;
 
+
 	// args parser
-	if (ensureArgs(argc, 1, argv) == IS_FALSE)
+	if (ensureArgs(argc, 2, argv) == IS_FALSE)
 			raiseError(2, __FILE__, __func__, __LINE__, ERROR_ID_2_CONTENT);
 
 	if (EQUAL == strcpy_s(user_equation, MAX_SON_ARG_INPUT_LEN, argv[1]))

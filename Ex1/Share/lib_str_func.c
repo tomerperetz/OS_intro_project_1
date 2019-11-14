@@ -10,6 +10,12 @@ This lib contains all functions related to string handeling
 
 int countOpretors(char *dest_str)
 {
+	/*
+	Description: count number of '+' and '*' in a given string 
+	parameters:
+			 - char *dest_str - string to look in
+	Returns: int counter number of operators
+	*/
 	int counter = 0;
 	for (int i = 0; dest_str[i] != '\0'; i++)
 	{

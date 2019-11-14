@@ -73,10 +73,11 @@ int execute_program(char equation[]) {
 			}
 			/*save eqation*/
 			fprintf(fp, "%s\n", equation);
-			_ltoa(result, result_str, 10);
+			_ltoa_s(result, result_str, MAX_SON_ARG_INPUT_LEN,10);
 			sub_equation_end_idx = idx;
 			/*replace sub equation*/
 			replace_sub_string(equation, sub_equation_start_idx, sub_equation_end_idx, result_str);
+
 			/*initialization*/
 			idx = 0;
 			sub_equation_idx = 0;
